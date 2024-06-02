@@ -229,3 +229,31 @@ docker compose -p kitchenpos up -d
 | 빈 상태      | EmptyStatus     | 빈 상태는 주문 테이블이 빈 상태를 나타낸다.      |
 
 ## 모델링
+
+### 우리가 해결해야할 영역 (Bounded Context)
+
+- 메뉴
+- 상품
+- 포장 주문
+- 매장 주문
+- 배달 주문
+
+### BC : 메뉴
+
+![img_5.png](img_5.png)
+
+### BC : 상품
+
+![img_6.png](img_6.png)
+
+### BC : 포장 주문
+
+![img_7.png](img_7.png)
+
+### BC : 매장 주문
+
+![img_8.png](img_8.png)
+ 
+### BC : 배달 주문
+
+![img_9.png](img_9.png)
