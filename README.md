@@ -240,20 +240,20 @@ docker compose -p kitchenpos up -d
 
 ### BC : 메뉴
 
-![img_5.png](img_5.png)
+![img.png](img.png)
 
 ### BC : 상품
 
-![img_6.png](img_6.png)
+![img_1.png](img_1.png)
 
 ### BC : 포장 주문
 
-![img_7.png](img_7.png)
+![img_3.png](img_3.png)
 
 ### BC : 매장 주문
 
-![img_8.png](img_8.png)
+![img_2.png](img_2.png)
  
 ### BC : 배달 주문
 
-![img_9.png](img_9.png)
+![img_4.png](img_4.png)
