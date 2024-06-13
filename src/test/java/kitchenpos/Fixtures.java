@@ -6,8 +6,8 @@ import kitchenpos.menu.domain.MenuProduct;
 import kitchenpos.domain.Order;
 import kitchenpos.domain.OrderLineItem;
 import kitchenpos.domain.OrderStatus;
-import kitchenpos.domain.OrderTable;
-import kitchenpos.domain.OrderType;
+import kitchenpos.order.eatin.domain.OrderTable;
+import kitchenpos.order.common.OrderType;
 import kitchenpos.product.domain.Product;
 
 import java.math.BigDecimal;
