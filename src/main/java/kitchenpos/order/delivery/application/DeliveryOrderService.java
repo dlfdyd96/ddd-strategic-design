@@ -9,7 +9,6 @@ import java.util.Objects;
 import java.util.UUID;
 import kitchenpos.menu.domain.Menu;
 import kitchenpos.menu.domain.MenuRepository;
-import kitchenpos.order.common.OrderType;
 import kitchenpos.order.delivery.domain.DeliveryOrder;
 import kitchenpos.order.delivery.domain.DeliveryOrderLineItem;
 import kitchenpos.order.delivery.domain.DeliveryOrderRepository;
@@ -37,10 +36,6 @@ public class DeliveryOrderService {
 
     @Transactional
     public DeliveryOrder create(final DeliveryOrder request) {
-        final OrderType type = request.getType();
-        if (Objects.isNull(type)) {
-            throw new IllegalArgumentException();
-        }
         final List<DeliveryOrderLineItem> orderLineItemRequests = request.getOrderLineItems();
         if (Objects.isNull(orderLineItemRequests) || orderLineItemRequests.isEmpty()) {
             throw new IllegalArgumentException();
@@ -74,7 +69,6 @@ public class DeliveryOrderService {
         }
         DeliveryOrder order = new DeliveryOrder();
         order.setId(UUID.randomUUID());
-        order.setType(type);
         order.setStatus(DeliveryOrderStatus.WAITING);
         order.setOrderDateTime(LocalDateTime.now());
         order.setOrderLineItems(orderLineItems);

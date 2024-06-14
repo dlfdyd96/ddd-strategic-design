@@ -8,7 +8,6 @@ import java.util.Objects;
 import java.util.UUID;
 import kitchenpos.menu.domain.Menu;
 import kitchenpos.menu.domain.MenuRepository;
-import kitchenpos.order.common.OrderType;
 import kitchenpos.order.eatin.domain.EatInOrder;
 import kitchenpos.order.eatin.domain.EatInOrderLineItem;
 import kitchenpos.order.eatin.domain.EatInOrderRepository;
@@ -37,10 +36,6 @@ public class EatInOrderService {
 
     @Transactional
     public EatInOrder create(final EatInOrder request) {
-        final OrderType type = request.getType();
-        if (Objects.isNull(type)) {
-            throw new IllegalArgumentException();
-        }
         final List<EatInOrderLineItem> orderLineItemRequests = request.getOrderLineItems();
         if (Objects.isNull(orderLineItemRequests) || orderLineItemRequests.isEmpty()) {
             throw new IllegalArgumentException();
@@ -71,7 +66,6 @@ public class EatInOrderService {
         }
         EatInOrder order = new EatInOrder();
         order.setId(UUID.randomUUID());
-        order.setType(type);
         order.setStatus(EatInOrderStatus.WAITING);
         order.setOrderDateTime(LocalDateTime.now());
         order.setOrderLineItems(orderLineItems);

@@ -69,7 +69,6 @@ public class TakeOutOrderService {
         }
         TakeOutOrder order = new TakeOutOrder();
         order.setId(UUID.randomUUID());
-        order.setType(type);
         order.setStatus(TakeOutOrderStatus.WAITING);
         order.setOrderDateTime(LocalDateTime.now());
         order.setOrderLineItems(orderLineItems);

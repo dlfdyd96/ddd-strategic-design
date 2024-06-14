@@ -27,7 +27,7 @@ public class EatInOrder {
 
     @Column(name = "type", nullable = false, columnDefinition = "varchar(255)")
     @Enumerated(EnumType.STRING)
-    private OrderType type;
+    private final OrderType type = OrderType.EAT_IN;
 
     @Column(name = "status", nullable = false, columnDefinition = "varchar(255)")
     @Enumerated(EnumType.STRING)
@@ -69,10 +69,6 @@ public class EatInOrder {
 
     public OrderType getType() {
         return type;
-    }
-
-    public void setType(final OrderType type) {
-        this.type = type;
     }
 
     public EatInOrderStatus getStatus() {

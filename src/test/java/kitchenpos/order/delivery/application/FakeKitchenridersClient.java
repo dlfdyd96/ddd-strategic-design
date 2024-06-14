@@ -1,7 +1,8 @@
-package kitchenpos.application;
+package kitchenpos.order.delivery.application;
 
 import java.math.BigDecimal;
 import java.util.UUID;
+import kitchenpos.order.delivery.infra.KitchenridersClient;
 
 public class FakeKitchenridersClient implements KitchenridersClient {
 
